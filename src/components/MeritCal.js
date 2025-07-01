@@ -120,7 +120,22 @@ function MeritCal() {
           <li>✔ 25% weight: PU Admission Test</li>
         </ul>
       </div>
-      <div className="sig"> Developed with <span role="img" aria-label="dog">❤️</span> by <span><b>AAiSH Tech</b></span></div>
+      <div
+  style={{
+    textAlign: "center",
+    marginTop: "40px",
+    fontSize: "16px",
+    color: "#4b5563",
+    fontFamily: "'Segoe UI', sans-serif",
+  }}
+>
+  Developed with{" "}
+  <span role="img" aria-label="heart">
+    ❤️
+  </span>{" "}
+  by <span style={{ fontWeight: "bold", color: "#2563eb" }}>AAiSH Tech</span>
+</div>
+
     </div>
   );
 }
