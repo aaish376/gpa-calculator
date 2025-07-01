@@ -14,7 +14,7 @@ const Navbar = () => {
         AAiSH Tech
       </Link> */}
       <Link id="logo-uni" to="/components/">
-          Calculator-UHP
+          Calculator-UHP | {uni}
       </Link>
       {/* <div id="logo-uni"  >
         <span>||</span> {uni}
