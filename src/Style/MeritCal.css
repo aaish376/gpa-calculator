@@ -22,16 +22,26 @@ h1 {
   font-size: 28px;
 }
 
-.input-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ responsive */
+.input-flex {
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   margin-bottom: 30px;
+  justify-content: space-between;
 }
 
 .form-group {
+  flex: 1 1 calc(50% - 20px); /* 2 per row with gap */
   display: flex;
   flex-direction: column;
+  min-width: 240px;
+}
+
+.hafiz-check {
+  flex: 1 1 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
 }
 
 .form-group label {
@@ -52,12 +62,7 @@ input[type="number"]:focus {
   border-color: #2563eb;
 }
 
-.hafiz-check {
-  grid-column: span 2;
-  display: flex;
-  align-items: center;
-  padding-top: 8px;
-}
+
 
 .calculate-btn {
   background-color: #2563eb;
@@ -129,8 +134,21 @@ ul {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ✅ Mobile Optimizations */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .form-group {
+    flex: 1 1 100%;
+  }
+
+  .hafiz-check {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .calculate-btn {
+    font-size: 15px;
+  }
+
   .container {
     padding: 20px;
   }
@@ -154,15 +172,5 @@ ul {
 
   input[type="number"] {
     font-size: 14px;
-  }
-
-  .hafiz-check {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .calculate-btn {
-    font-size: 15px;
   }
 }

@@ -34,7 +34,7 @@ function MeritCal() {
     <div className="container">
       <h1>🎓 PU Merit Calculator</h1>
 
-      <div className="input-grid">
+      <div className="input-flex">
         <div className="form-group">
           <label>Matric Obtained Marks</label>
           <input
