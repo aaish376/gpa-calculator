@@ -119,3 +119,33 @@ ul {
   padding-left: 20px;
   margin-top: 15px;
 }
+
+@media (max-width: 600px) {
+  .input-grid {
+    grid-template-columns: 1fr; /* Stack inputs vertically */
+  }
+
+  .hafiz-check {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .calculate-btn {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  .explanation {
+    padding: 15px;
+    font-size: 15px;
+  }
+
+  .result h2 {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
