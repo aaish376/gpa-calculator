@@ -22,7 +22,10 @@ const HomePage = () => {
       <div className="basic-container home-body">
 
         <h1>Hey, Dude! Welcome Here!</h1>
-        <h5>Select Your University/Department:</h5>
+        <button id="btn" onClick={() => navigate(`/components/merit-cal`)}>
+          PU Merit Calculator
+        </button>
+        <h5>GPA/CGPA Calculator: Select Your University/Department:</h5>
         <select id="uni-selector" value={uni} onChange={handleUniChange}>
         <option value="PU">PU</option>
         <option value="PUCIT">PUCIT</option>
