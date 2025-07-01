@@ -32,57 +32,93 @@ function MeritCal() {
 
   return (
     <div className="container">
-      <h1>PU Merit Calculator</h1>
+      <h1>🎓 PU Merit Calculator</h1>
 
-      <div className="input-group">
-        <label>Matric Obtained Marks:</label>
-        <input type="number" value={matricObt} onChange={e => setMatricObt(e.target.value)} />
+      <div className="input-grid">
+        <div className="form-group">
+          <label>Matric Obtained Marks</label>
+          <input
+            type="number"
+            value={matricObt}
+            onChange={(e) => setMatricObt(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Matric Total Marks</label>
+          <input
+            type="number"
+            value={matricTotal}
+            onChange={(e) => setMatricTotal(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Inter Part-I Obtained Marks</label>
+          <input
+            type="number"
+            value={interObt}
+            onChange={(e) => setInterObt(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>Inter Part-I Total Marks</label>
+          <input
+            type="number"
+            value={interTotal}
+            onChange={(e) => setInterTotal(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group">
+          <label>PU Entry Test Marks (out of 100)</label>
+          <input
+            type="number"
+            value={entryTest}
+            onChange={(e) => setEntryTest(e.target.value)}
+          />
+        </div>
+
+        <div className="form-group hafiz-check">
+          <label>
+            <input
+              type="checkbox"
+              checked={isHafiz}
+              onChange={(e) => setIsHafiz(e.target.checked)}
+            />
+            Hafiz-e-Quran (Add 20 bonus marks)
+          </label>
+        </div>
       </div>
 
-      <div className="input-group">
-        <label>Matric Total Marks:</label>
-        <input type="number" value={matricTotal} onChange={e => setMatricTotal(e.target.value)} />
-      </div>
-
-      <div className="input-group">
-        <label>Inter Part-I Obtained Marks:</label>
-        <input type="number" value={interObt} onChange={e => setInterObt(e.target.value)} />
-      </div>
-
-      <div className="input-group">
-        <label>Inter Part-I Total Marks:</label>
-        <input type="number" value={interTotal} onChange={e => setInterTotal(e.target.value)} />
-      </div>
-
-      <div className="input-group">
-        <label>PU Entry Test Marks (out of 100):</label>
-        <input type="number" value={entryTest} onChange={e => setEntryTest(e.target.value)} />
-      </div>
-
-      <div className="checkbox-group">
-        <input type="checkbox" checked={isHafiz} onChange={e => setIsHafiz(e.target.checked)} />
-        <label>I am Hafiz-e-Quran (+20 marks)</label>
-      </div>
-
-      <button onClick={calculateMerit}>Calculate Merit</button>
+      <button className="calculate-btn" onClick={calculateMerit}>
+        🎯 Calculate Merit
+      </button>
 
       {merit !== null && (
         <div className="result">
-          <h2>Your Final Merit: {merit} %</h2>
+          <h2>📢 Your Final Merit: <span>{merit}%</span></h2>
         </div>
       )}
 
       <div className="explanation">
-        <h3>Merit Formula Explanation:</h3>
+        <h3>🧮 Merit Calculation Formula</h3>
         <p>
-          <strong>Merit =</strong><br />
-          ((¼ × Matric Obtained + Inter Part-I + 20<sup>*</sup>) /
-          (¼ × Matric Total + Inter Total)) × 75
-          <br />+ Entry Test Marks × 0.25
+          <strong>
+            Merit = <br />
+            ((¼ × Matric Obtained + Inter Part-I + <span className="bonus">+20*</span>) <br />
+            ÷ (¼ × Matric Total + Inter Total)) × 75 <br />
+            + PU Entry Test Marks × 0.25
+          </strong>
         </p>
-        <p>
-          <sup>*</sup> 20 additional marks only if you are Hafiz-e-Quran.
-        </p>
+        <p className="note">* Bonus only if Hafiz-e-Quran is checked</p>
+        <hr />
+        <ul>
+          <li>✔ 25% weight: Matric (¼ weight)</li>
+          <li>✔ 50% weight: Inter Part-I</li>
+          <li>✔ 25% weight: PU Admission Test</li>
+        </ul>
       </div>
     </div>
   );

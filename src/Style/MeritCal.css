@@ -1,58 +1,121 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #eef2f7, #fff);
+  margin: 0;
+  padding: 40px 20px;
 }
 
 .container {
-  max-width: 600px;
-  background: #fff;
+  max-width: 800px;
+  background: white;
   margin: auto;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   text-align: center;
+  color: #1f2937;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
-.input-group, .checkbox-group {
-  margin-bottom: 15px;
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
 }
 
 input[type="number"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-}
-
-button {
-  background-color: #0066cc;
-  color: white;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  width: 100%;
+  padding: 10px;
+  border: 2px solid #d1d5db;
+  border-radius: 8px;
   font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
 }
 
-button:hover {
-  background-color: #004999;
+input[type="number"]:focus {
+  border-color: #2563eb;
+}
+
+.hafiz-check {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.calculate-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.calculate-btn:hover {
+  background-color: #1d4ed8;
 }
 
 .result {
-  margin-top: 25px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 20px;
+  font-weight: 600;
   color: green;
+  margin-top: 15px;
 }
 
 .explanation {
   margin-top: 40px;
-  background: #eef3f9;
-  padding: 15px;
-  border-radius: 8px;
+  background: #f9fafb;
+  padding: 20px 25px;
+  border-radius: 10px;
+  border-left: 6px solid #2563eb;
+}
+
+.explanation h3 {
+  font-size: 20px;
+  color: #1f2937;
+  margin-bottom: 15px;
+}
+
+.explanation p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.bonus {
+  color: #10b981;
+  font-weight: bold;
+}
+
+.note {
+  color: #6b7280;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: square;
+  padding-left: 20px;
+  margin-top: 15px;
 }
