@@ -91,7 +91,7 @@ function MeritCal() {
           </label>
         </div>
       </div>
-        <div className="sig"> Developed with <span role="img" aria-label="dog">❤️</span> by <span><b>AAiSH Tech</b></span></div>
+        
       <button className="calculate-btn" onClick={calculateMerit}>
         🎯 Calculate Merit
       </button>
@@ -120,6 +120,7 @@ function MeritCal() {
           <li>✔ 25% weight: PU Admission Test</li>
         </ul>
       </div>
+      <div className="sig"> Developed with <span role="img" aria-label="dog">❤️</span> by <span><b>AAiSH Tech</b></span></div>
     </div>
   );
 }
