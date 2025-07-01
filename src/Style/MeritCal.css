@@ -120,9 +120,18 @@ ul {
   margin-top: 15px;
 }
 
+.sig {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+  color: #4b5563;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ✅ Responsive Fix */
 @media (max-width: 600px) {
   .input-grid {
-    grid-template-columns: 1fr; /* Stack inputs vertically */
+    grid-template-columns: 1fr;
   }
 
   .hafiz-check {
@@ -132,20 +141,31 @@ ul {
   }
 
   .calculate-btn {
-    width: 100%;
     font-size: 15px;
   }
 
-  .explanation {
-    padding: 15px;
-    font-size: 15px;
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 22px;
   }
 
   .result h2 {
     font-size: 18px;
   }
 
-  h1 {
-    font-size: 24px;
+  .explanation {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  input[type="number"] {
+    font-size: 14px;
   }
 }
