@@ -26,7 +26,7 @@ const Navbar = () => {
         {/* <Link to="/components/">Home</Link> */}
         <Link to="/components/gpa-cal/:flag/:index">GPA</Link>
         <Link to="/components/cgpa-cal">CGPA</Link>
-        {/* <Link to="/contact">Conact</Link> */}
+        <Link to="/components/merit-cal">Merit Calculator</Link>
       </div>
 
     

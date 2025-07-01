@@ -9,6 +9,7 @@ import CgpaCal from "./components/CgpaCal";
 import MyPage from "./components/MyPage";
 import UafGpa from "./components/UafGpa";
 import UafCgpa from "./components/UafCgpa";
+import MeritCal from "./components/MeritCal";
 
 function App() {
   return (
@@ -27,6 +28,8 @@ function App() {
             <Route path="/components/cgpa-cal" element={<CgpaCal />} />
             <Route path="/components/my-page/:numSem" element={<MyPage />} />
             <Route path="/components/uaf-cgpa/:numSem" element={<UafCgpa />} />
+
+            <Route path="/components/merit-cal" element={<MeritCal />} />
           </Routes>
 
         </Router>

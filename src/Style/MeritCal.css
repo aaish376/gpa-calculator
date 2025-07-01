@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  padding: 30px;
+}
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input-group, .checkbox-group {
+  margin-bottom: 15px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #004999;
+}
+
+.result {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.2em;
+  color: green;
+}
+
+.explanation {
+  margin-top: 40px;
+  background: #eef3f9;
+  padding: 15px;
+  border-radius: 8px;
+}
