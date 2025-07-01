@@ -1,8 +1,9 @@
+/* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to bottom, #eef2f7, #fff);
   margin: 0;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .container {
@@ -23,7 +24,7 @@ h1 {
 
 .input-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* ✅ responsive */
   gap: 20px;
   margin-bottom: 30px;
 }
@@ -128,22 +129,8 @@ ul {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* ✅ Responsive Fix */
-@media (max-width: 600px) {
-  .input-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hafiz-check {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-
-  .calculate-btn {
-    font-size: 15px;
-  }
-
+/* ✅ Mobile Optimizations */
+@media (max-width: 480px) {
   .container {
     padding: 20px;
   }
@@ -167,5 +154,15 @@ ul {
 
   input[type="number"] {
     font-size: 14px;
+  }
+
+  .hafiz-check {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .calculate-btn {
+    font-size: 15px;
   }
 }
